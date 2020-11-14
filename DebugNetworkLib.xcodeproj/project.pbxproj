@@ -16,6 +16,36 @@
 		32A74A07255F99E400DD0B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A74A05255F99E400DD0B96 /* Main.storyboard */; };
 		32A74A09255F99E700DD0B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A74A08255F99E700DD0B96 /* Assets.xcassets */; };
 		32A74A0C255F99E700DD0B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A74A0A255F99E700DD0B96 /* LaunchScreen.storyboard */; };
+		32A74A34255FA01500DD0B96 /* DNLAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A15255FA01500DD0B96 /* DNLAssets.swift */; };
+		32A74A35255FA01500DD0B96 /* DNLWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A16255FA01500DD0B96 /* DNLWindowController.swift */; };
+		32A74A36255FA01500DD0B96 /* DNLInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A17255FA01500DD0B96 /* DNLInfoController.swift */; };
+		32A74A37255FA01500DD0B96 /* DNLLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A74A18255FA01500DD0B96 /* DNLLoader.h */; };
+		32A74A38255FA01500DD0B96 /* DNLGenericController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A19255FA01500DD0B96 /* DNLGenericController.swift */; };
+		32A74A39255FA01500DD0B96 /* DNLSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1A255FA01500DD0B96 /* DNLSettingsController.swift */; };
+		32A74A3A255FA01500DD0B96 /* DNLListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1B255FA01500DD0B96 /* DNLListController.swift */; };
+		32A74A3B255FA01500DD0B96 /* DNLHTTPModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1C255FA01500DD0B96 /* DNLHTTPModelManager.swift */; };
+		32A74A3C255FA01500DD0B96 /* DNLSocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1D255FA01500DD0B96 /* DNLSocketIOManager.swift */; };
+		32A74A3D255FA01500DD0B96 /* DNLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1E255FA01500DD0B96 /* DNLConstants.swift */; };
+		32A74A3E255FA01600DD0B96 /* DNLGenericBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1F255FA01500DD0B96 /* DNLGenericBodyDetailsController.swift */; };
+		32A74A3F255FA01600DD0B96 /* DNLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A20255FA01500DD0B96 /* DNLModel.swift */; };
+		32A74A40255FA01600DD0B96 /* DNLLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A21255FA01500DD0B96 /* DNLLoader.m */; };
+		32A74A41255FA01600DD0B96 /* DNLAuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A22255FA01500DD0B96 /* DNLAuthenticationChallengeSender.swift */; };
+		32A74A42255FA01600DD0B96 /* DNL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A23255FA01500DD0B96 /* DNL.swift */; };
+		32A74A43255FA01600DD0B96 /* DNLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A24255FA01500DD0B96 /* DNLProtocol.swift */; };
+		32A74A44255FA01600DD0B96 /* DNLRawBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A25255FA01500DD0B96 /* DNLRawBodyDetailsController.swift */; };
+		32A74A45255FA01600DD0B96 /* DNLStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A26255FA01500DD0B96 /* DNLStatisticsController.swift */; };
+		32A74A46255FA01600DD0B96 /* DNLHTTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A27255FA01500DD0B96 /* DNLHTTPModel.swift */; };
+		32A74A47255FA01600DD0B96 /* DNLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A28255FA01500DD0B96 /* DNLHelper.swift */; };
+		32A74A48255FA01600DD0B96 /* DNLDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A29255FA01500DD0B96 /* DNLDetailsController.swift */; };
+		32A74A49255FA01600DD0B96 /* DNLImageBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2A255FA01500DD0B96 /* DNLImageBodyDetailsController.swift */; };
+		32A74A4A255FA01600DD0B96 /* DNLDetailsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2C255FA01500DD0B96 /* DNLDetailsController_iOS.swift */; };
+		32A74A4B255FA01600DD0B96 /* DNLListController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2D255FA01500DD0B96 /* DNLListController_iOS.swift */; };
+		32A74A4C255FA01600DD0B96 /* DNLURLDetailsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2E255FA01500DD0B96 /* DNLURLDetailsControllerViewController.swift */; };
+		32A74A4D255FA01600DD0B96 /* DNLHelper_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2F255FA01500DD0B96 /* DNLHelper_iOS.swift */; };
+		32A74A4E255FA01600DD0B96 /* DNLInfoController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A30255FA01500DD0B96 /* DNLInfoController_iOS.swift */; };
+		32A74A4F255FA01600DD0B96 /* DNLStatisticsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A31255FA01500DD0B96 /* DNLStatisticsController_iOS.swift */; };
+		32A74A50255FA01600DD0B96 /* DNLSettingsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A32255FA01500DD0B96 /* DNLSettingsController_iOS.swift */; };
+		32A74A51255FA01600DD0B96 /* DNLListCell_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A33255FA01500DD0B96 /* DNLListCell_iOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +73,36 @@
 		32A74A08255F99E700DD0B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32A74A0B255F99E700DD0B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32A74A0D255F99E700DD0B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32A74A15255FA01500DD0B96 /* DNLAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLAssets.swift; sourceTree = "<group>"; };
+		32A74A16255FA01500DD0B96 /* DNLWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLWindowController.swift; sourceTree = "<group>"; };
+		32A74A17255FA01500DD0B96 /* DNLInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLInfoController.swift; sourceTree = "<group>"; };
+		32A74A18255FA01500DD0B96 /* DNLLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLoader.h; sourceTree = "<group>"; };
+		32A74A19255FA01500DD0B96 /* DNLGenericController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLGenericController.swift; sourceTree = "<group>"; };
+		32A74A1A255FA01500DD0B96 /* DNLSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLSettingsController.swift; sourceTree = "<group>"; };
+		32A74A1B255FA01500DD0B96 /* DNLListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLListController.swift; sourceTree = "<group>"; };
+		32A74A1C255FA01500DD0B96 /* DNLHTTPModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLHTTPModelManager.swift; sourceTree = "<group>"; };
+		32A74A1D255FA01500DD0B96 /* DNLSocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLSocketIOManager.swift; sourceTree = "<group>"; };
+		32A74A1E255FA01500DD0B96 /* DNLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLConstants.swift; sourceTree = "<group>"; };
+		32A74A1F255FA01500DD0B96 /* DNLGenericBodyDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLGenericBodyDetailsController.swift; sourceTree = "<group>"; };
+		32A74A20255FA01500DD0B96 /* DNLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLModel.swift; sourceTree = "<group>"; };
+		32A74A21255FA01500DD0B96 /* DNLLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNLLoader.m; sourceTree = "<group>"; };
+		32A74A22255FA01500DD0B96 /* DNLAuthenticationChallengeSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLAuthenticationChallengeSender.swift; sourceTree = "<group>"; };
+		32A74A23255FA01500DD0B96 /* DNL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNL.swift; sourceTree = "<group>"; };
+		32A74A24255FA01500DD0B96 /* DNLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLProtocol.swift; sourceTree = "<group>"; };
+		32A74A25255FA01500DD0B96 /* DNLRawBodyDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLRawBodyDetailsController.swift; sourceTree = "<group>"; };
+		32A74A26255FA01500DD0B96 /* DNLStatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLStatisticsController.swift; sourceTree = "<group>"; };
+		32A74A27255FA01500DD0B96 /* DNLHTTPModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLHTTPModel.swift; sourceTree = "<group>"; };
+		32A74A28255FA01500DD0B96 /* DNLHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLHelper.swift; sourceTree = "<group>"; };
+		32A74A29255FA01500DD0B96 /* DNLDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLDetailsController.swift; sourceTree = "<group>"; };
+		32A74A2A255FA01500DD0B96 /* DNLImageBodyDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLImageBodyDetailsController.swift; sourceTree = "<group>"; };
+		32A74A2C255FA01500DD0B96 /* DNLDetailsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLDetailsController_iOS.swift; sourceTree = "<group>"; };
+		32A74A2D255FA01500DD0B96 /* DNLListController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLListController_iOS.swift; sourceTree = "<group>"; };
+		32A74A2E255FA01500DD0B96 /* DNLURLDetailsControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLURLDetailsControllerViewController.swift; sourceTree = "<group>"; };
+		32A74A2F255FA01500DD0B96 /* DNLHelper_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLHelper_iOS.swift; sourceTree = "<group>"; };
+		32A74A30255FA01500DD0B96 /* DNLInfoController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLInfoController_iOS.swift; sourceTree = "<group>"; };
+		32A74A31255FA01500DD0B96 /* DNLStatisticsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLStatisticsController_iOS.swift; sourceTree = "<group>"; };
+		32A74A32255FA01500DD0B96 /* DNLSettingsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLSettingsController_iOS.swift; sourceTree = "<group>"; };
+		32A74A33255FA01500DD0B96 /* DNLListCell_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLListCell_iOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +154,8 @@
 		32A749DF255F995D00DD0B96 /* DebugNetworkLib */ = {
 			isa = PBXGroup;
 			children = (
+				32A74A14255FA01500DD0B96 /* Core */,
+				32A74A2B255FA01500DD0B96 /* iOS */,
 				32A749E0255F995D00DD0B96 /* DebugNetworkLib.h */,
 				32A749E1255F995D00DD0B96 /* Info.plist */,
 			);
@@ -123,6 +185,50 @@
 			path = DebugNetworkLibExample;
 			sourceTree = "<group>";
 		};
+		32A74A14255FA01500DD0B96 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				32A74A15255FA01500DD0B96 /* DNLAssets.swift */,
+				32A74A16255FA01500DD0B96 /* DNLWindowController.swift */,
+				32A74A17255FA01500DD0B96 /* DNLInfoController.swift */,
+				32A74A18255FA01500DD0B96 /* DNLLoader.h */,
+				32A74A19255FA01500DD0B96 /* DNLGenericController.swift */,
+				32A74A1A255FA01500DD0B96 /* DNLSettingsController.swift */,
+				32A74A1B255FA01500DD0B96 /* DNLListController.swift */,
+				32A74A1C255FA01500DD0B96 /* DNLHTTPModelManager.swift */,
+				32A74A1D255FA01500DD0B96 /* DNLSocketIOManager.swift */,
+				32A74A1E255FA01500DD0B96 /* DNLConstants.swift */,
+				32A74A1F255FA01500DD0B96 /* DNLGenericBodyDetailsController.swift */,
+				32A74A20255FA01500DD0B96 /* DNLModel.swift */,
+				32A74A21255FA01500DD0B96 /* DNLLoader.m */,
+				32A74A22255FA01500DD0B96 /* DNLAuthenticationChallengeSender.swift */,
+				32A74A23255FA01500DD0B96 /* DNL.swift */,
+				32A74A24255FA01500DD0B96 /* DNLProtocol.swift */,
+				32A74A25255FA01500DD0B96 /* DNLRawBodyDetailsController.swift */,
+				32A74A26255FA01500DD0B96 /* DNLStatisticsController.swift */,
+				32A74A27255FA01500DD0B96 /* DNLHTTPModel.swift */,
+				32A74A28255FA01500DD0B96 /* DNLHelper.swift */,
+				32A74A29255FA01500DD0B96 /* DNLDetailsController.swift */,
+				32A74A2A255FA01500DD0B96 /* DNLImageBodyDetailsController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		32A74A2B255FA01500DD0B96 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				32A74A2C255FA01500DD0B96 /* DNLDetailsController_iOS.swift */,
+				32A74A2D255FA01500DD0B96 /* DNLListController_iOS.swift */,
+				32A74A2E255FA01500DD0B96 /* DNLURLDetailsControllerViewController.swift */,
+				32A74A2F255FA01500DD0B96 /* DNLHelper_iOS.swift */,
+				32A74A30255FA01500DD0B96 /* DNLInfoController_iOS.swift */,
+				32A74A31255FA01500DD0B96 /* DNLStatisticsController_iOS.swift */,
+				32A74A32255FA01500DD0B96 /* DNLSettingsController_iOS.swift */,
+				32A74A33255FA01500DD0B96 /* DNLListCell_iOS.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -130,6 +236,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A74A37255FA01500DD0B96 /* DNLLoader.h in Headers */,
 				32A749EE255F995E00DD0B96 /* DebugNetworkLib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +369,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A74A46255FA01600DD0B96 /* DNLHTTPModel.swift in Sources */,
+				32A74A35255FA01500DD0B96 /* DNLWindowController.swift in Sources */,
+				32A74A3E255FA01600DD0B96 /* DNLGenericBodyDetailsController.swift in Sources */,
+				32A74A4A255FA01600DD0B96 /* DNLDetailsController_iOS.swift in Sources */,
+				32A74A49255FA01600DD0B96 /* DNLImageBodyDetailsController.swift in Sources */,
+				32A74A34255FA01500DD0B96 /* DNLAssets.swift in Sources */,
+				32A74A4F255FA01600DD0B96 /* DNLStatisticsController_iOS.swift in Sources */,
+				32A74A4B255FA01600DD0B96 /* DNLListController_iOS.swift in Sources */,
+				32A74A41255FA01600DD0B96 /* DNLAuthenticationChallengeSender.swift in Sources */,
+				32A74A39255FA01500DD0B96 /* DNLSettingsController.swift in Sources */,
+				32A74A3B255FA01500DD0B96 /* DNLHTTPModelManager.swift in Sources */,
+				32A74A3C255FA01500DD0B96 /* DNLSocketIOManager.swift in Sources */,
+				32A74A38255FA01500DD0B96 /* DNLGenericController.swift in Sources */,
+				32A74A50255FA01600DD0B96 /* DNLSettingsController_iOS.swift in Sources */,
+				32A74A3A255FA01500DD0B96 /* DNLListController.swift in Sources */,
+				32A74A3D255FA01500DD0B96 /* DNLConstants.swift in Sources */,
+				32A74A4C255FA01600DD0B96 /* DNLURLDetailsControllerViewController.swift in Sources */,
+				32A74A43255FA01600DD0B96 /* DNLProtocol.swift in Sources */,
+				32A74A51255FA01600DD0B96 /* DNLListCell_iOS.swift in Sources */,
+				32A74A47255FA01600DD0B96 /* DNLHelper.swift in Sources */,
+				32A74A4D255FA01600DD0B96 /* DNLHelper_iOS.swift in Sources */,
+				32A74A42255FA01600DD0B96 /* DNL.swift in Sources */,
+				32A74A40255FA01600DD0B96 /* DNLLoader.m in Sources */,
+				32A74A48255FA01600DD0B96 /* DNLDetailsController.swift in Sources */,
+				32A74A36255FA01500DD0B96 /* DNLInfoController.swift in Sources */,
+				32A74A44255FA01600DD0B96 /* DNLRawBodyDetailsController.swift in Sources */,
+				32A74A45255FA01600DD0B96 /* DNLStatisticsController.swift in Sources */,
+				32A74A4E255FA01600DD0B96 /* DNLInfoController_iOS.swift in Sources */,
+				32A74A3F255FA01600DD0B96 /* DNLModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +622,7 @@
 		32A749F5255F995E00DD0B96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = DebugNetworkLibTests/Info.plist;
@@ -504,6 +641,7 @@
 		32A749F6255F995E00DD0B96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = DebugNetworkLibTests/Info.plist;
