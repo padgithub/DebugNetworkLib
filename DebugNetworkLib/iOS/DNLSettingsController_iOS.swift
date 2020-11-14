@@ -20,7 +20,7 @@ class DNLSettingsController_iOS: DNLSettingsController, UITableViewDelegate, UIT
     {
         super.viewDidLoad()
         
-        DNLURL = "https://github.com/kasketis/DebugNetworkLib"
+        DNLURL = "https://github.com/padgithub/DebugNetworkLib"
         
         self.title = "Settings"
         
@@ -29,7 +29,11 @@ class DNLSettingsController_iOS: DNLSettingsController, UITableViewDelegate, UIT
         
         self.edgesForExtendedLayout = UIRectEdge()
         self.extendedLayoutIncludesOpaqueBars = false
-        self.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         
         self.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage.DNLStatistics(), style: .plain, target: self, action: #selector(DNLSettingsController_iOS.statisticsButtonPressed)), UIBarButtonItem(image: UIImage.DNLInfo(), style: .plain, target: self, action: #selector(DNLSettingsController_iOS.infoButtonPressed))]
         
@@ -73,7 +77,7 @@ class DNLSettingsController_iOS: DNLSettingsController, UITableViewDelegate, UIT
     
     @objc func DNLURLButtonPressed()
     {
-        UIApplication.shared.openURL(URL(string: DNLURL)!)
+        UIApplication.shared.open(URL(string: DNLURL)!)
     }
     
     @objc func infoButtonPressed()
