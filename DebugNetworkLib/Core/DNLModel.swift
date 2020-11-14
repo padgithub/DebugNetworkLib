@@ -55,6 +55,13 @@ class DNLRequestData {
         return json
     }
     
+    func getJsonResponseData(info: DNLRequestInfo) -> [String: Any] {
+        guard let data = try? JSONEncoder().encode(info) else { return [:] }
+        guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else { return [:] }
+        guard let json = jsonObject as? [String: Any] else { return [:] }
+        return json
+    }
+    
     func getJsonMessageData() -> [String: Any] {
         guard let data = try? JSONEncoder().encode(getMessage()) else { return [:] }
         guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else { return [:] }
@@ -82,7 +89,7 @@ class DNLRequestData {
         return dataResponse
     }
     
-    private func getDate() -> String {
+    func getDate() -> String {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
         return dateFormatter.string(from: Date())
@@ -120,6 +127,18 @@ class DNLRequestInfo: Codable {
         self.authorize = ""
         self.httpBody = ""
         self.data = ""
+    }
+    
+    init(id: String, date: String, url: String, statusCode: Int, method: String, userAgent: String, authorize: String, httpBody: String, data: String) {
+        self.id = id
+        self.date = date
+        self.url = url
+        self.statusCode = statusCode
+        self.method = method
+        self.userAgent = userAgent
+        self.authorize = authorize
+        self.httpBody = httpBody
+        self.data = data
     }
     
     enum CodingKeys: String, CodingKey {

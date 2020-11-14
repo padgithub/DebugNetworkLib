@@ -17,21 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7d-9S-gdj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="430"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NN-bT-2Kw">
+                                <rect key="frame" x="181" y="684" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Call API"/>
+                                <connections>
+                                    <action selector="callAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHl-JL-bVa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZo-Is-4ey">
+                                <rect key="frame" x="175" y="620" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post API"/>
+                                <connections>
+                                    <action selector="postAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mxa-VV-9dG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L7d-9S-gdj" secondAttribute="bottom" id="1fU-Rn-0V7"/>
                             <constraint firstItem="L7d-9S-gdj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LMV-Dl-qdO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L7d-9S-gdj" secondAttribute="trailing" id="bgd-8i-QCa"/>
                             <constraint firstItem="L7d-9S-gdj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mYN-xY-ivr"/>
+                            <constraint firstItem="L7d-9S-gdj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.479911" id="tMc-EJ-hpo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -40,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="41"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="40.848214285714285"/>
         </scene>
     </scenes>
     <resources>

@@ -6,11 +6,7 @@
 //
 
 import Foundation
-#if os(iOS)
 import UIKit
-#elseif os(OSX)
-import Cocoa
-#endif
 
 class DNLGenericController: DNLViewController
 {
@@ -19,13 +15,8 @@ class DNLGenericController: DNLViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-    #if os(iOS)
         self.edgesForExtendedLayout = UIRectEdge.all
         self.view.backgroundColor = DNLColor.DNLGray95Color()
-    #elseif os(OSX)
-        self.view.wantsLayer = true
-        self.view.layer?.backgroundColor = DNLColor.DNLGray95Color().cgColor
-    #endif
     }
     
     func selectedModel(_ model: DNLHTTPModel)

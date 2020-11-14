@@ -5,8 +5,6 @@
 //  Copyright © 2020 DebugNetworkLib. All rights reserved.
 //
 
-#if os(iOS)
-
 import Foundation
 import UIKit
 
@@ -67,5 +65,3 @@ class DNLRawBodyDetailsController: DNLGenericBodyDetailsController
         copyAlert?.dismiss(animated: true) { [weak self] in self?.copyAlert = nil }
     }
 }
-
-#endif

@@ -6,11 +6,7 @@
 //
 
 import Foundation
-#if os(OSX)
-import Cocoa
-#else
 import UIKit
-#endif
 
 private func podPlistVersion() -> String? {
     guard let path = Bundle(identifier: "com.kasketis.DebugNetworkLib-iOS")?.infoDictionary?["CFBundleShortVersionString"] as? String else { return nil }
@@ -27,12 +23,6 @@ let DNLWillCloseNotification = "DNLWillCloseNotification"
 @objc
 open class DNL: NSObject
 {
-    #if os(OSX)
-        var windowController: DNLWindowController?
-        let mainMenu: NSMenu? = NSApp.mainMenu?.items[1].submenu
-        var DNLMenuItem: NSMenuItem = NSMenuItem(title: "DebugNetworkLib", action: #selector(DNL.show), keyEquivalent: String.init(describing: (character: NSF9FunctionKey, length: 1)))
-    #endif
-    
     // swiftSharedInstance is not accessible from ObjC
     class var swiftSharedInstance: DNL
     {
@@ -77,9 +67,6 @@ open class DNL: NSObject
         enable()
         clearOldData()
         showMessage("Started!")
-    #if os(OSX)
-        self.addDebugNetworkLibToMainMenu()
-    #endif
     }
     
     @objc open func stop()
@@ -89,13 +76,10 @@ open class DNL: NSObject
         clearOldData()
         self.started = false
         showMessage("Stopped!")
-    #if os(OSX)
-        self.removeDebugNetworkLibFromMainmenu()
-    #endif
     }
     
     fileprivate func showMessage(_ msg: String) {
-        print("DebugNetworkLib \(DNLVersion) - [https://github.com/kasketis/DebugNetworkLib]: \(msg)")
+        print("DebugNetworkLib \(DNLVersion) - [https://github.com/padgithub/DebugNetworkLib]: \(msg)")
     }
     
     internal func isEnabled() -> Bool
@@ -140,13 +124,6 @@ open class DNL: NSObject
     @objc open func setGesture(_ gesture: EDNLGesture)
     {
         self.selectedGesture = gesture
-    #if os(OSX)
-        if gesture == .shake {
-            self.addDebugNetworkLibToMainMenu()
-        } else {
-            self.removeDebugNetworkLibFromMainmenu()
-        }
-    #endif
     }
     
     @objc open func show()
@@ -265,7 +242,7 @@ extension DNL {
         navigationController.navigationBar.tintColor = UIColor.DNLOrangeColor()
         navigationController.navigationBar.barTintColor = UIColor.DNLStarkWhiteColor()
         navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.DNLOrangeColor()]
-
+        
         if #available(iOS 13.0, *) {
             navigationController.presentationController?.delegate = self
         }
@@ -292,54 +269,4 @@ extension DNL: UIAdaptivePresentationControllerDelegate {
     }
 }
 
-#elseif os(OSX)
-    
-extension DNL {
-    
-    public func windowDidClose() {
-        self.presented = false
-    }
-    
-    private func setupDebugNetworkLibMenuItem() {
-        self.DNLMenuItem.target = self
-        self.DNLMenuItem.action = #selector(DNL.motionDetected)
-        self.DNLMenuItem.keyEquivalent = "n"
-        self.DNLMenuItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(rawValue: UInt(Int(NSEvent.ModifierFlags.command.rawValue | NSEvent.ModifierFlags.shift.rawValue)))
-    }
-    
-    public func addDebugNetworkLibToMainMenu() {
-        self.setupDebugNetworkLibMenuItem()
-        if let menu = self.mainMenu {
-            menu.insertItem(self.DNLMenuItem, at: 0)
-        }
-    }
-    
-    public func removeDebugNetworkLibFromMainmenu() {
-        if let menu = self.mainMenu {
-            menu.removeItem(self.DNLMenuItem)
-        }
-    }
-    
-    public func showDNLFollowingPlatform()  {
-        if self.windowController == nil {
-            #if swift(>=4.2)
-            let nibName = "DebugNetworkLibWindow"
-            #else
-            let nibName = NSNib.Name(rawValue: "DebugNetworkLibWindow")
-            #endif
-
-            self.windowController = DNLWindowController(windowNibName: nibName)
-        }
-        self.windowController?.showWindow(nil)
-    }
-    
-    public func hideDNLFollowingPlatform(completion: (() -> Void)?)
-    {
-        self.windowController?.close()
-        if let notNilCompletion = completion {
-            notNilCompletion()
-        }
-    }
-}
-    
 #endif

@@ -6,11 +6,7 @@
 //
 
 import Foundation
-#if os(OSX)
-import Cocoa
-#else
 import UIKit
-#endif
 
 public enum HTTPModelShortType: String
 {
@@ -97,7 +93,6 @@ extension DNLColor
 
 extension DNLFont
 {
-#if os(iOS)
     class func DNLFont(size: CGFloat) -> UIFont
     {
         return UIFont(name: "HelveticaNeue", size: size)!
@@ -107,18 +102,6 @@ extension DNLFont
     {
         return UIFont(name: "HelveticaNeue-Bold", size: size)!
     }
-    
-#elseif os(OSX)
-    class func DNLFont(size: CGFloat) -> NSFont
-    {
-        return NSFont(name: "HelveticaNeue", size: size)!
-    }
-    
-    class func DNLFontBold(size: CGFloat) -> NSFont
-    {
-        return NSFont(name: "HelveticaNeue-Bold", size: size)!
-    }
-#endif
 }
 
 extension URLRequest
@@ -221,60 +204,44 @@ extension DNLImage
 {
     class func DNLSettings() -> DNLImage
     {
-    #if os (iOS)
         return UIImage(data: DNLAssets.getImage(DNLAssetName.settings), scale: 1.7)!
-    #elseif os(OSX)
-        return NSImage(data: DNLAssets.getImage(DNLAssetName.settings))!
-    #endif
     }
-
+    
     class func DNLClose() -> DNLImage
     {
-    #if os (iOS)
         return UIImage(data: DNLAssets.getImage(DNLAssetName.close), scale: 1.7)!
-    #elseif os(OSX)
-        return NSImage(data: DNLAssets.getImage(DNLAssetName.close))!
-    #endif
     }
     
     class func DNLInfo() -> DNLImage
     {
-    #if os (iOS)
         return UIImage(data: DNLAssets.getImage(DNLAssetName.info), scale: 1.7)!
-    #elseif os(OSX)
-        return NSImage(data: DNLAssets.getImage(DNLAssetName.info))!
-    #endif
     }
     
     class func DNLStatistics() -> DNLImage
     {
-    #if os (iOS)
         return UIImage(data: DNLAssets.getImage(DNLAssetName.statistics), scale: 1.7)!
-    #elseif os(OSX)
-        return NSImage(data: DNLAssets.getImage(DNLAssetName.statistics))!
-    #endif
     }
 }
 
 extension InputStream {
-  func readfully() -> Data {
-    var result = Data()
-    var buffer = [UInt8](repeating: 0, count: 4096)
-    
-    open()
-    
-    var amount = 0
-    repeat {
-      amount = read(&buffer, maxLength: buffer.count)
-      if amount > 0 {
-        result.append(buffer, count: amount)
-      }
-    } while amount > 0
-    
-    close()
-    
-    return result
-  }
+    func readfully() -> Data {
+        var result = Data()
+        var buffer = [UInt8](repeating: 0, count: 4096)
+        
+        open()
+        
+        var amount = 0
+        repeat {
+            amount = read(&buffer, maxLength: buffer.count)
+            if amount > 0 {
+                result.append(buffer, count: amount)
+            }
+        } while amount > 0
+        
+        close()
+        
+        return result
+    }
 }
 
 extension Date
@@ -314,33 +281,21 @@ class DNLDebugInfo
     
     class func getDNLOSVersion() -> String
     {
-    #if os(iOS)
         return UIDevice.current.systemVersion
-    #elseif os(OSX)
-        return ProcessInfo.processInfo.operatingSystemVersionString
-    #endif
     }
     
     class func getDNLDeviceType() -> String
     {
-    #if os(iOS)
-        return UIDevice.getDNLDeviceType() 
-    #elseif os(OSX)
-        return "Not implemented yet. PR welcomes"
-    #endif
+        return UIDevice.getDNLDeviceType()
     }
     
     class func getDNLDeviceScreenResolution() -> String
     {
-    #if os(iOS)
         let scale = UIScreen.main.scale
         let bounds = UIScreen.main.bounds
         let width = bounds.size.width * scale
         let height = bounds.size.height * scale
         return "\(width) x \(height)"
-    #elseif os(OSX)
-        return "0"
-    #endif
     }
     
     class func getDNLIP(_ completion:@escaping (_ result: String) -> Void)
@@ -403,7 +358,7 @@ extension String
     static func implementDebugNetworkLib() {
         guard firstOccurrence else { return }
         firstOccurrence = false
-
+        
         // First let's make sure setter: URLSessionConfiguration.protocolClasses is de-duped
         // This ensures DNLProtocol won't be added twice
         swizzleProtocolSetter()

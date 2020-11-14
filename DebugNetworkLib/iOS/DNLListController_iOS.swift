@@ -6,7 +6,7 @@
 //
 
 #if os(iOS)
-    
+
 import Foundation
 import UIKit
 
@@ -25,35 +25,39 @@ class DNLListController_iOS: DNLListController, UITableViewDelegate, UITableView
         
         self.edgesForExtendedLayout = UIRectEdge.all
         self.extendedLayoutIncludesOpaqueBars = true
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = false
-        }
-        self.tableView.frame = self.view.frame
-        self.tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.tableView.translatesAutoresizingMaskIntoConstraints = true
+        self.tableView.contentInsetAdjustmentBehavior = .never
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(self.tableView)
         
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ])
+        
+        let guide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
+            tableView.bottomAnchor.constraint(equalToSystemSpacingBelow: guide.bottomAnchor, multiplier: 1.0)
+        ])
+        
         self.tableView.register(DNLListCell.self, forCellReuseIdentifier: NSStringFromClass(DNLListCell.self))
-
+        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.DNLClose(), style: .plain, target: self, action: #selector(DNLListController_iOS.closeButtonPressed))
-
+        
         let rightButtons = [
             UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(DNLListController_iOS.trashButtonPressed)),
             UIBarButtonItem(image: UIImage.DNLSettings(), style: .plain, target: self, action: #selector(DNLListController_iOS.settingsButtonPressed))
         ]
-
+        
         self.navigationItem.rightBarButtonItems = rightButtons
-
-
+        
+        
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController.searchResultsUpdater = self
         self.searchController.delegate = self
         self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.searchBar.autoresizingMask = [.flexibleWidth]
         self.searchController.searchBar.backgroundColor = UIColor.clear
         self.searchController.searchBar.barTintColor = UIColor.DNLOrangeColor()
@@ -73,7 +77,7 @@ class DNLListController_iOS: DNLListController, UITableViewDelegate, UITableView
             searchView.addSubview(self.searchController.searchBar)
             self.searchController.searchBar.sizeToFit()
             searchView.frame = self.searchController.searchBar.frame
-
+            
             self.navigationItem.titleView = searchView
         }
         
@@ -95,22 +99,21 @@ class DNLListController_iOS: DNLListController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         reloadTableViewData()
     }
-
+    
     @objc func settingsButtonPressed()
     {
         var settingsController: DNLSettingsController_iOS
         settingsController = DNLSettingsController_iOS()
         self.navigationController?.pushViewController(settingsController, animated: true)
     }
-
+    
     @objc func trashButtonPressed()
     {
         self.clearData(sourceView: tableView, originingIn: nil) {
-
             self.reloadTableViewData()
         }
     }
-
+    
     @objc func closeButtonPressed()
     {
         DNL.sharedInstance().hide()
@@ -196,7 +199,6 @@ class DNLListController_iOS: DNLListController, UITableViewDelegate, UITableView
     {
         return 58
     }
-
 }
 
 #endif

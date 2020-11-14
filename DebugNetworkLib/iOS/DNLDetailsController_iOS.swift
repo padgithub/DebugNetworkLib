@@ -298,7 +298,7 @@ class DNLDetailsController_iOS: DNLDetailsController, MFMailComposeViewControlle
         tempString += "** RESPONSE **\n"
         tempString += "\(getResponseStringFromObject(self.selectedModel).string)\n\n"
 
-        tempString += "logged via DebugNetworkLib - [https://github.com/kasketis/DebugNetworkLib]\n"
+        tempString += "logged via DebugNetworkLib - [https://github.com/padgithub/DebugNetworkLib]\n"
 
         if full {
             let requestFilePath = self.selectedModel.getRequestBodyFilepath()

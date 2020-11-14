@@ -17,7 +17,6 @@
 		32A74A09255F99E700DD0B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A74A08255F99E700DD0B96 /* Assets.xcassets */; };
 		32A74A0C255F99E700DD0B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A74A0A255F99E700DD0B96 /* LaunchScreen.storyboard */; };
 		32A74A34255FA01500DD0B96 /* DNLAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A15255FA01500DD0B96 /* DNLAssets.swift */; };
-		32A74A35255FA01500DD0B96 /* DNLWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A16255FA01500DD0B96 /* DNLWindowController.swift */; };
 		32A74A36255FA01500DD0B96 /* DNLInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A17255FA01500DD0B96 /* DNLInfoController.swift */; };
 		32A74A37255FA01500DD0B96 /* DNLLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A74A18255FA01500DD0B96 /* DNLLoader.h */; };
 		32A74A38255FA01500DD0B96 /* DNLGenericController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A19255FA01500DD0B96 /* DNLGenericController.swift */; };
@@ -79,7 +78,6 @@
 		32A74A0B255F99E700DD0B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32A74A0D255F99E700DD0B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A74A15255FA01500DD0B96 /* DNLAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLAssets.swift; sourceTree = "<group>"; };
-		32A74A16255FA01500DD0B96 /* DNLWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLWindowController.swift; sourceTree = "<group>"; };
 		32A74A17255FA01500DD0B96 /* DNLInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLInfoController.swift; sourceTree = "<group>"; };
 		32A74A18255FA01500DD0B96 /* DNLLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNLLoader.h; sourceTree = "<group>"; };
 		32A74A19255FA01500DD0B96 /* DNLGenericController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNLGenericController.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				32A74A15255FA01500DD0B96 /* DNLAssets.swift */,
-				32A74A16255FA01500DD0B96 /* DNLWindowController.swift */,
 				32A74A17255FA01500DD0B96 /* DNLInfoController.swift */,
 				32A74A18255FA01500DD0B96 /* DNLLoader.h */,
 				32A74A19255FA01500DD0B96 /* DNLGenericController.swift */,
@@ -518,7 +515,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32A74A46255FA01600DD0B96 /* DNLHTTPModel.swift in Sources */,
-				32A74A35255FA01500DD0B96 /* DNLWindowController.swift in Sources */,
 				32A74A3E255FA01600DD0B96 /* DNLGenericBodyDetailsController.swift in Sources */,
 				32A74A4A255FA01600DD0B96 /* DNLDetailsController_iOS.swift in Sources */,
 				32A74A49255FA01600DD0B96 /* DNLImageBodyDetailsController.swift in Sources */,

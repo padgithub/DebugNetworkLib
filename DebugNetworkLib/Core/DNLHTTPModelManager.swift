@@ -24,9 +24,9 @@ final class DNLHTTPModelManager: NSObject
                 guard let data =  obj.urlSessionDataTask else {
                     return
                 }
-                let obj = DNLRequestData.init(urlSessionDataTask: data, data: obj.dataConver ?? Data())
-                SocketIOManager.shared.send(data: obj.getJsonResponseData())
-                print("SockABC")
+                let req = DNLRequestData.init(urlSessionDataTask: data, data: obj.dataConver ?? Data())
+                let info = DNLRequestInfo(id: req.id, date: req.getDate(), url: obj.requestURL ?? "", statusCode: obj.responseStatus ?? 0, method: obj.requestMethod ?? "", userAgent: "", authorize: "", httpBody: obj.getRequestBody() as String, data: obj.getResponseBody() as String)
+                SocketIOManager.shared.send(data: req.getJsonResponseData(info: info))
             }
             
         }
