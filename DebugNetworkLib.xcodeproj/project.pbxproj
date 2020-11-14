@@ -213,10 +213,8 @@
 				32A74A1A255FA01500DD0B96 /* DNLSettingsController.swift */,
 				32A74A1B255FA01500DD0B96 /* DNLListController.swift */,
 				32A74A1C255FA01500DD0B96 /* DNLHTTPModelManager.swift */,
-				32A74A1D255FA01500DD0B96 /* DNLSocketIOManager.swift */,
 				32A74A1E255FA01500DD0B96 /* DNLConstants.swift */,
 				32A74A1F255FA01500DD0B96 /* DNLGenericBodyDetailsController.swift */,
-				32A74A20255FA01500DD0B96 /* DNLModel.swift */,
 				32A74A21255FA01500DD0B96 /* DNLLoader.m */,
 				32A74A22255FA01500DD0B96 /* DNLAuthenticationChallengeSender.swift */,
 				32A74A23255FA01500DD0B96 /* DNL.swift */,
@@ -227,6 +225,8 @@
 				32A74A28255FA01500DD0B96 /* DNLHelper.swift */,
 				32A74A29255FA01500DD0B96 /* DNLDetailsController.swift */,
 				32A74A2A255FA01500DD0B96 /* DNLImageBodyDetailsController.swift */,
+				32A74A20255FA01500DD0B96 /* DNLModel.swift */,
+				32A74A1D255FA01500DD0B96 /* DNLSocketIOManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
