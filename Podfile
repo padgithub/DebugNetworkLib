@@ -16,7 +16,7 @@ end
 target 'DebugNetworkLibExample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'Socket.IO-Client-Swift'
   # Pods for DebugNetworkLibExample
 
 end
