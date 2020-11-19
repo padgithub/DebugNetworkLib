@@ -25,12 +25,12 @@ npm install
 ```shell
 ./run-server-debug.sh
 ```
+final go to [Server](http://localhost:3000/)
+
 ### Open in Simulator
 ```
 command + control + z
 ```
-
-final go to [Server](http://localhost:3000/)
 
 ## Installation
 
