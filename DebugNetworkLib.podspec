@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DebugNetworkLib"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "Debug network for iOS."
 
   spec.description  = <<-DESC
