@@ -2,8 +2,7 @@
 //  DNLAuthenticationChallengeSender.swift
 //  DebugNetworkLib_ios
 //
-//  Created by Nathan Jangula on 3/5/18.
-//  Copyright © 2018 kasketis. All rights reserved.
+//  Copyright © 2020 Anh Dung. All rights reserved.
 //
 
 import Foundation

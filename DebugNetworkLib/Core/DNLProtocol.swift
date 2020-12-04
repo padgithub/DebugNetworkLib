@@ -19,8 +19,7 @@ open class DNLProtocol: URLProtocol
     private let model = DNLHTTPModel()
     private var response: URLResponse?
     private var responseData: NSMutableData?
-    //PAD add
-    private var urlSessionDataTask: URLSessionDataTask?
+    
     override open class func canInit(with request: URLRequest) -> Bool
     {
         return canServeRequest(request)
@@ -79,16 +78,12 @@ open class DNLProtocol: URLProtocol
 extension DNLProtocol: URLSessionDataDelegate {
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         responseData?.append(data)
-        //PAD add
-        urlSessionDataTask = dataTask
         client?.urlProtocol(self, didLoad: data)
     }
     
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
         self.response = response
         self.responseData = NSMutableData()
-        //PAD add
-        urlSessionDataTask = dataTask
         client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: DNL.swiftSharedInstance.cacheStoragePolicy)
         completionHandler(.allow)
     }
@@ -113,8 +108,7 @@ extension DNLProtocol: URLSessionDataDelegate {
             model.saveErrorResponse()
         } else if let response = response {
             let data = (responseData ?? NSMutableData()) as Data
-            //PAD add
-            model.saveResponse(response, data: data, urlSessionDataTask: urlSessionDataTask)
+            model.saveResponse(response, data: data)
         }
         
         DNLHTTPModelManager.sharedInstance.add(model)

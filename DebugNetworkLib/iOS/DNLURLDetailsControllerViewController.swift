@@ -3,7 +3,7 @@
 //  DebugNetworkLib_ios
 //
 //  Created by Tzatzo, Marsel on 05/06/2019.
-//  Copyright © 2019 kasketis. All rights reserved.
+//  Copyright © 2020 Anh Dung. All rights reserved.
 //
 
 #if os(iOS)

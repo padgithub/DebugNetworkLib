@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		323659A4257A155800AAB6CD /* DNLAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A15255FA01500DD0B96 /* DNLAssets.swift */; };
+		323659A8257A156900AAB6CD /* DNLSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1A255FA01500DD0B96 /* DNLSettingsController.swift */; };
+		323659A9257A156900AAB6CD /* DNLListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1B255FA01500DD0B96 /* DNLListController.swift */; };
+		323659AA257A156900AAB6CD /* DNLHTTPModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1C255FA01500DD0B96 /* DNLHTTPModelManager.swift */; };
+		323659AB257A156900AAB6CD /* DNLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1E255FA01500DD0B96 /* DNLConstants.swift */; };
+		323659AC257A156900AAB6CD /* DNLGenericBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1F255FA01500DD0B96 /* DNLGenericBodyDetailsController.swift */; };
+		323659AD257A156900AAB6CD /* DNLGenericController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A19255FA01500DD0B96 /* DNLGenericController.swift */; };
+		323659B1257A156E00AAB6CD /* DNLInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A17255FA01500DD0B96 /* DNLInfoController.swift */; };
+		323659B5257A157400AAB6CD /* DNLAuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A22255FA01500DD0B96 /* DNLAuthenticationChallengeSender.swift */; };
+		323659B6257A157400AAB6CD /* DNLRawBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A25255FA01500DD0B96 /* DNLRawBodyDetailsController.swift */; };
+		323659B7257A157400AAB6CD /* DNLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A28255FA01500DD0B96 /* DNLHelper.swift */; };
+		323659B8257A157400AAB6CD /* DNLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A24255FA01500DD0B96 /* DNLProtocol.swift */; };
+		323659B9257A157400AAB6CD /* DNL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A23255FA01500DD0B96 /* DNL.swift */; };
+		323659BA257A157400AAB6CD /* DNLStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A26255FA01500DD0B96 /* DNLStatisticsController.swift */; };
+		323659BB257A157400AAB6CD /* DNLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A20255FA01500DD0B96 /* DNLModel.swift */; };
+		323659BC257A157400AAB6CD /* DNLSocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A1D255FA01500DD0B96 /* DNLSocketIOManager.swift */; };
+		323659BD257A157400AAB6CD /* DNLDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A29255FA01500DD0B96 /* DNLDetailsController.swift */; };
+		323659BE257A157400AAB6CD /* DNLHTTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A27255FA01500DD0B96 /* DNLHTTPModel.swift */; };
+		323659BF257A157400AAB6CD /* DNLImageBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2A255FA01500DD0B96 /* DNLImageBodyDetailsController.swift */; };
+		323659C3257A157900AAB6CD /* DNLSettingsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A32255FA01500DD0B96 /* DNLSettingsController_iOS.swift */; };
+		323659C4257A157900AAB6CD /* DNLInfoController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A30255FA01500DD0B96 /* DNLInfoController_iOS.swift */; };
+		323659C5257A157900AAB6CD /* DNLListController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2D255FA01500DD0B96 /* DNLListController_iOS.swift */; };
+		323659C6257A157900AAB6CD /* DNLDetailsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2C255FA01500DD0B96 /* DNLDetailsController_iOS.swift */; };
+		323659C7257A157900AAB6CD /* DNLStatisticsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A31255FA01500DD0B96 /* DNLStatisticsController_iOS.swift */; };
+		323659C8257A157900AAB6CD /* DNLHelper_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2F255FA01500DD0B96 /* DNLHelper_iOS.swift */; };
+		323659C9257A157900AAB6CD /* DNLURLDetailsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A2E255FA01500DD0B96 /* DNLURLDetailsControllerViewController.swift */; };
+		323659CA257A157900AAB6CD /* DNLListCell_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A74A33255FA01500DD0B96 /* DNLListCell_iOS.swift */; };
 		32A749E7255F995E00DD0B96 /* DebugNetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A749DD255F995D00DD0B96 /* DebugNetworkLib.framework */; };
 		32A749EC255F995E00DD0B96 /* DebugNetworkLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A749EB255F995E00DD0B96 /* DebugNetworkLibTests.swift */; };
 		32A749EE255F995E00DD0B96 /* DebugNetworkLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A749E0255F995D00DD0B96 /* DebugNetworkLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -557,9 +584,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323659BC257A157400AAB6CD /* DNLSocketIOManager.swift in Sources */,
+				323659AB257A156900AAB6CD /* DNLConstants.swift in Sources */,
 				32A74A04255F99E400DD0B96 /* ViewController.swift in Sources */,
+				323659B9257A157400AAB6CD /* DNL.swift in Sources */,
+				323659CA257A157900AAB6CD /* DNLListCell_iOS.swift in Sources */,
+				323659AC257A156900AAB6CD /* DNLGenericBodyDetailsController.swift in Sources */,
+				323659B1257A156E00AAB6CD /* DNLInfoController.swift in Sources */,
 				32A74A00255F99E400DD0B96 /* AppDelegate.swift in Sources */,
+				323659A9257A156900AAB6CD /* DNLListController.swift in Sources */,
+				323659C9257A157900AAB6CD /* DNLURLDetailsControllerViewController.swift in Sources */,
+				323659BA257A157400AAB6CD /* DNLStatisticsController.swift in Sources */,
+				323659C3257A157900AAB6CD /* DNLSettingsController_iOS.swift in Sources */,
+				323659C8257A157900AAB6CD /* DNLHelper_iOS.swift in Sources */,
+				323659C7257A157900AAB6CD /* DNLStatisticsController_iOS.swift in Sources */,
+				323659B8257A157400AAB6CD /* DNLProtocol.swift in Sources */,
+				323659B6257A157400AAB6CD /* DNLRawBodyDetailsController.swift in Sources */,
+				323659BB257A157400AAB6CD /* DNLModel.swift in Sources */,
 				32A74A02255F99E400DD0B96 /* SceneDelegate.swift in Sources */,
+				323659BD257A157400AAB6CD /* DNLDetailsController.swift in Sources */,
+				323659AD257A156900AAB6CD /* DNLGenericController.swift in Sources */,
+				323659AA257A156900AAB6CD /* DNLHTTPModelManager.swift in Sources */,
+				323659C6257A157900AAB6CD /* DNLDetailsController_iOS.swift in Sources */,
+				323659C5257A157900AAB6CD /* DNLListController_iOS.swift in Sources */,
+				323659A4257A155800AAB6CD /* DNLAssets.swift in Sources */,
+				323659BF257A157400AAB6CD /* DNLImageBodyDetailsController.swift in Sources */,
+				323659A8257A156900AAB6CD /* DNLSettingsController.swift in Sources */,
+				323659B7257A157400AAB6CD /* DNLHelper.swift in Sources */,
+				323659BE257A157400AAB6CD /* DNLHTTPModel.swift in Sources */,
+				323659C4257A157900AAB6CD /* DNLInfoController_iOS.swift in Sources */,
+				323659B5257A157400AAB6CD /* DNLAuthenticationChallengeSender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +787,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.padit.DebugNetworkLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -760,6 +815,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.padit.DebugNetworkLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -818,6 +874,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = DebugNetworkLibExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -838,6 +895,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = DebugNetworkLibExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

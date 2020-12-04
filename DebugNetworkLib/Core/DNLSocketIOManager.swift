@@ -3,7 +3,7 @@
 //  DebugNetworkLib
 //
 //  Created by Phung Anh Dung on 11/5/20.
-//  Copyright © 2020 kasketis. All rights reserved.
+//  Copyright © 2020 Anh Dung. All rights reserved.
 //
 
 import SocketIO

@@ -39,11 +39,10 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     @objc public var responseTime: String?
     @objc public var responseHeaders: [AnyHashable: Any]?
     public var responseBodyLength: Int?
+    public var responseUserAgent: String?
+    public var responseAuthorization: String?
     
     public var timeInterval: Float?
-    
-    public var urlSessionDataTask: URLSessionDataTask?
-    public var dataConver: Data?
     
     @objc public var randomHash: NSString?
     
@@ -83,7 +82,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         self.responseDate = Date()
     }
     
-    func saveResponse(_ response: URLResponse, data: Data, urlSessionDataTask: URLSessionDataTask? = nil)
+    func saveResponse(_ response: URLResponse, data: Data)
     {
         self.noResponse = false
         
@@ -99,13 +98,18 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
             self.shortType = getShortTypeFrom(self.responseType!).rawValue as NSString
         }
         
+        if let userAgent = headers["User-Agent"] as? String {
+            self.responseUserAgent = userAgent
+        }
+        
+        if let authorization = headers["Authorization"] as? String {
+            self.responseAuthorization = authorization
+        }
+        
         self.timeInterval = Float(self.responseDate!.timeIntervalSince(self.requestDate!))
         
         saveResponseBodyData(data)
         formattedResponseLogEntry().appendToFile(filePath: DNLPath.SessionLog)
-        self.urlSessionDataTask = urlSessionDataTask
-        self.dataConver = data
-        // vo day
     }
     
     
@@ -162,8 +166,15 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         guard let data = readRawData(getResponseBodyFilepath()) else {
             return ""
         }
-        
         return prettyOutput(data, contentType: responseType)
+    }
+    
+    @objc public func getResponseBodyJson() -> String
+    {
+        guard let data = readRawData(getResponseBodyFilepath()) else {
+            return ""
+        }
+        return DNLDataResponseParser.parse(data: data).description
     }
     
     @objc public func getRandomHash() -> NSString
@@ -353,5 +364,11 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         }
         
         return log;
+    }
+    
+    func getDate() -> String {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
+        return dateFormatter.string(from: Date())
     }
 }

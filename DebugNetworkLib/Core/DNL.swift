@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 private func podPlistVersion() -> String? {
-    guard let path = Bundle(identifier: "com.kasketis.DebugNetworkLib-iOS")?.infoDictionary?["CFBundleShortVersionString"] as? String else { return nil }
+    guard let path = Bundle(identifier: "com.padit.DebugNetworkLib")?.infoDictionary?["CFBundleShortVersionString"] as? String else { return nil }
     return path
 }
 

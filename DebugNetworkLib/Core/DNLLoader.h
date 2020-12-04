@@ -2,7 +2,7 @@
 //  DNLLoader.h
 //  DebugNetworkLib
 //
-//  Copyright © 2017 kasketis. All rights reserved.
+//  Copyright © 2020 Anh Dung. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

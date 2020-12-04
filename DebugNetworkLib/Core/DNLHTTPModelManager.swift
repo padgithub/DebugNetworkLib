@@ -21,14 +21,9 @@ final class DNLHTTPModelManager: NSObject
             self.models.insert(obj, at: 0)
             NotificationCenter.default.post(name: NSNotification.Name.DNLAddedModel, object: obj)
             if SocketIOManager.shared.isSocketConnected() {
-                guard let data =  obj.urlSessionDataTask else {
-                    return
-                }
-                let req = DNLRequestData.init(urlSessionDataTask: data, data: obj.dataConver ?? Data())
-                let info = DNLRequestInfo(id: req.id, date: req.getDate(), url: obj.requestURL ?? "", statusCode: obj.responseStatus ?? 0, method: obj.requestMethod ?? "", userAgent: "", authorize: "", httpBody: obj.getRequestBody() as String, data: obj.getResponseBody() as String)
-                SocketIOManager.shared.send(data: req.getJsonResponseData(info: info))
+                let info = DNLRequestInfo(id: UUID().uuidString, date: obj.getDate(), url: obj.requestURL ?? "N/A", statusCode: obj.responseStatus ?? 0, method: obj.requestMethod ?? "N/A", userAgent: obj.responseUserAgent ?? "N/A", authorize: obj.responseAuthorization ?? "", httpBody: obj.getRequestBody() as String, data: obj.getResponseBody() as String)
+                SocketIOManager.shared.send(data: info.getJsonResponseData())
             }
-            
         }
     }
     
