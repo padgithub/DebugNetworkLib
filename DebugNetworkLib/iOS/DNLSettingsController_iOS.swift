@@ -133,7 +133,7 @@ class DNLSettingsController_iOS: DNLSettingsController, UITableViewDelegate, UIT
             
         case 2:
             cell.textLabel?.textAlignment = .center
-            cell.textLabel?.text = "Share Session Logs"
+            cell.textLabel?.text = "Share Session Logs to Mail"
             cell.textLabel?.textColor = UIColor.DNLGreenColor()
             cell.textLabel?.font = UIFont.DNLFont(size: 16)
             return cell
